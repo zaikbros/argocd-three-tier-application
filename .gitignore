@@ -1,0 +1,39 @@
+# Spring Boot
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.mvn/
+mvnw
+mvnw.cmd
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.iml
+*.iws
+
+# Secrets & Certificates (CRITICAL)
+tls.key
+tls.crt
+.env
+.env.local
+application-secret.properties
+application-local.properties
+src/main/resources/application-local.properties
+src/main/resources/application-secret.properties
+
+# OS
+.DS_Store
+Thumbs.db

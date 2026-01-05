@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hr-system
+  namespace: argocd
+  annotations: {}
+spec:
+  project: default
+  source:
+    repoURL: https://gitlab.com/zaikbros/three-tier-application.git # Updated to match your path
+    targetRevision: main
+    path: helm/hr-system
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: hr-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
